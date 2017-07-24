@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color | Canvas</title>
+    <script type="text/javascript">
+        'use strict';
+
+        function colorGrid(ctx, holst) {
+            let width = 25;
+            let height = 25;
+
+            let row = 2 || holst.height / height;
+            console.log('row: ', row);
+
+            let column = 10 || holst.width / width;
+            console.log('column: ', column);
+her
+            let startColor = {
+                red: 175,
+                green: 115,
+                blue: 40
+            };
+
+            const BITE = 256;
+            let color = null;
+
+            let step = 0 || Math.floor((BITE - startColor.green) / column);
+            console.log('step: ', step);
+
+            for (let i = 0; i < row; i++) {
+                for (let j = 0; j < column; j++) {
+                    let red = Math.floor(step * j + startColor.red);
+                    let green = Math.floor(step * i + startColor.green);
+                    let blue = startColor.blue;
+
+                    let x = j * width;
+                    let y = i * height;
+
+                    color = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+                    console.log('color: ', color);
+
+                    ctx.fillStyle = color;
+                    ctx.fillRect(x, y, width, height);
+                }
+            }
+
+            //console.log('color: ', color);
+        }
+
+        function draw() {
+            let canvas = document.getElementById('canvas');
+
+            if (canvas.getContext) {
+                let ctx = canvas.getContext('2d');
+
+                colorGrid(ctx, canvas);
+            }
+        }
+    </script>
+    <style type="text/css">
+        canvas { border: 1px solid black; }
+    </style>
+</head>
+<body onload="draw()">
+    <canvas id="canvas" width="600" height="400"></canvas>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "colormodels",
+  "version": "0.0.1",
+  "description": "Sandbox for color models",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grymyk/colormodels.git"
+  },
+  "dependencies": {
+    "co-body": "^1.0.0",
+    "koa": "^0.12.2",
+    "koa-basic-auth": "^1.1.2",
+    "koa-logger": "^1.2.2",
+    "koa-router": "^3.4.0",
+    "koa-static": "^1.4.7"
+  },
+  "engines": {
+    "node": "8.1.4",
+    "npm": "5.2.0"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "koa"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

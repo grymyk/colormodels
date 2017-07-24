@@ -1,0 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+}
+#map {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+#table_holder {
+    width: 30%;
+    height: 45%;
+    margin: 0 auto;
+}

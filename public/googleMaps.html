@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Overlays</title>
+    <link rel="stylesheet" type="text/css" href="css/google-maps.css" />
+</head>
+<body>
+    <h1>Google Maps Overlays</h1>
+    <div id="map"></div>
+    <div id="table_holder">
+        <table>
+            <tr>
+                <td><b>Zoom</b></td><td id="zoom-cell">21</td>
+            </tr>
+            <tr>
+                <td><b>Map Center</b></td><td id="position-cell">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><b>POV Heading</b></td><td id="heading-cell">0</td>
+            </tr>
+            <tr>
+                <td><b>POV Tilt</b></td><td id="tilt-cell">0</td>
+            </tr>
+            <tr>
+                <td><b>POV Pitch</b></td><td id="pitch-cell">0.0</td>
+            </tr>
+        </table>
+    </div>
+    <script src="js/topview.js"></script>
+    <!--<script src="js/streetview.js"></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrnOq51Oc_YpRUfWv6fGQ0d1Py5izkY-4&callback=initMap" async defer></script>
+</body>
+</html>
