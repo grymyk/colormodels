@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+
+</head>
+<body>
+<script type="text/javascript">
+    'use strict';
+
+    console.log('svg.js');
+
+    let svg = {};
+
+    svg.createSVG = function createSVG(polygon) {
+        console.log('createSVG');
+
+        const SVG_NS = 'http://www.w3.org/2000/svg';
+        const XLINK_NS = 'http://www.w3.org/1999/xlink';
+
+        let building = document.createElementNS(SVG_NS, 'svg');
+
+        //console.log(building);
+
+        //building.setAttributeNS(null, 'xmlns', SVG_NS);
+        building.setAttributeNS(null, 'width', 120);
+        building.setAttributeNS(null, 'height', 120);
+        building.setAttributeNS(null, 'viewBox', '0 0 120 120');
+
+        building.innerHTML = polygon;
+
+        console.log(building);
+
+        document.body.appendChild(building);
+    };
+
+    svg.createPolygon = function createPolygon() {
+        console.log('createPolygon');
+
+        return '<polygon ' +
+            'points="60,20 100,40 100,80 60,100 20,80 20,40"' +
+            'style="fill: red; stroke: blue; stroke-width: 1"' +
+            '/>';
+    };
+
+    let pl = svg.createPolygon();
+    console.log('pl:', pl);
+    svg.createSVG(pl);
+
+</script>
+</body>
+</html>
